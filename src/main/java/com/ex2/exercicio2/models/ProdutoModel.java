@@ -1,10 +1,7 @@
 package com.ex2.exercicio2.models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
@@ -16,7 +13,9 @@ public class ProdutoModel {
     @GeneratedValue
     private Long id;
     private String nome;
+    @Column(name = "valorItem")
     private BigDecimal preco;
+    @Column(name = "numeroEstoque")
     private Integer estoque;
 
     public ProdutoModel() {
